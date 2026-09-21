@@ -98,8 +98,8 @@ $('guessBtn').onclick=function(){
     $('total').textContent=S.total;
     var d=Math.abs(S.cur.y-guess);
     var line = d===0 ? 'Exact. Nailed it.' :
-               d<=5 ? 'So close - off by '+d+'.' :
-               'It was '+S.cur.y+' - off by '+d+'.';
+               d<=5 ? 'So close - off by '+d+'. The year:' :
+               'Off by '+d+'. The year:';
     $('verdict').innerHTML='<span class="pts">+'+pts+'</span>'+line+' <b>'+S.cur.y+'</b>';
     $('guessBtn').textContent = (S.round===ROUNDS-1)?'See results':'Next event';
     $('guessBtn').className='btn ghost';
